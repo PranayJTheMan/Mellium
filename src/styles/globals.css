@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for zen aesthetic */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Zen Maru Gothic', ui-sans-serif, system-ui;
+    background-color: #fafafa;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  #root {
+    height: 100vh;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .zen-panel {
+    @apply bg-zen-panel border border-zen-border shadow-zen rounded-zen;
+  }
+  
+  .zen-button {
+    @apply px-4 py-2 rounded-zen font-medium transition-all duration-200 ease-in-out;
+    @apply bg-zen-bg border border-zen-border text-zen-text;
+    @apply hover:bg-zen-accentLight hover:border-zen-accent hover:text-zen-accent;
+    @apply focus:outline-none focus:ring-2 focus:ring-zen-accent focus:ring-opacity-20;
+  }
+  
+  .zen-button-primary {
+    @apply zen-button bg-zen-accent text-white border-zen-accent;
+    @apply hover:bg-opacity-90 hover:border-opacity-90;
+  }
+  
+  .zen-input {
+    @apply px-3 py-2 rounded-zen border border-zen-border bg-zen-bg;
+    @apply focus:outline-none focus:ring-2 focus:ring-zen-accent focus:ring-opacity-20;
+    @apply focus:border-zen-accent transition-colors duration-200;
+  }
+  
+  .zen-toolbar {
+    @apply flex items-center gap-2 p-2 bg-zen-panel border-b border-zen-border;
+  }
+  
+  .zen-section-title {
+    @apply text-sm font-medium text-zen-textLight uppercase tracking-wide;
+  }
+}
+
+/* Utility classes for zen spacing */
+@layer utilities {
+  .zen-spacing {
+    padding: 1.5rem;
+  }
+  
+  .zen-spacing-sm {
+    padding: 1rem;
+  }
+  
+  .zen-spacing-lg {
+    padding: 2rem;
+  }
+}
